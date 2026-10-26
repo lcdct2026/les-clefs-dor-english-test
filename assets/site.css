@@ -892,3 +892,10 @@ body.en .nav {
   body.en header nav { gap: 16px; }
   body.en .nav { gap: 12px; }
 }
+
+/* v15: remove the unnecessary border/shadow around the Taiwan flag */
+.flag-icon.flag-tw {
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}

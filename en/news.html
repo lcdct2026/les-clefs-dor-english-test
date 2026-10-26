@@ -53,10 +53,56 @@
 </div>
 </section>
 <section>
-<div class="wrap">Loading the latest updates…</div>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">CONCIERGE WORLD</div>
+        <h2 class="title">Connecting Taiwan with the World</h2>
+      </div>
+      <p>From international association news and destination stories to awards and professional development,<br/>discover what Les Clefs d’Or concierges around the world are sharing, learning and exploring.</p>
+    </div>
+    <div class="community-world-grid">
+      <article class="community-world-card reveal">
+        <div class="community-world-kicker">01 · UICH</div>
+        <h3>Les Clefs d’Or International</h3>
+        <p>News from the international association, key updates, congress announcements and member sections worldwide.</p>
+        <div class="community-links rss-list" data-rss-source="international"><div class="rss-status">Loading the latest updates…</div></div>
+        <div class="community-feed-note">Automatically updated from UICH</div>
+      </article>
+      <article class="community-world-card reveal">
+        <div class="community-world-kicker">02 · DESTINATION</div>
+        <h3>Your Key To...</h3>
+        <p>Destination stories, local insights and memorable experiences shared by Les Clefs d’Or concierges around the world.</p>
+        <div class="community-links rss-list" data-rss-source="travel"><div class="rss-status">Loading the latest stories…</div></div>
+        <div class="community-feed-note">Automatically updated from UICH</div>
+      </article>
+      <article class="community-world-card reveal">
+        <div class="community-world-kicker">03 · GROWTH</div>
+        <h3>Awards &amp; Professional Development</h3>
+        <p>Explore professional training, key updates and educational initiatives that support the continued growth of the concierge profession.</p>
+        <div class="community-links rss-list rss-training" data-rss-source="training" data-rss-limit="3"><div class="rss-status">Loading the latest updates…</div></div>
+        <div class="community-feed-note">Automatically updated from UICH</div>
+      </article>
+    </div>
+  </div>
 </section>
 <section class="community-congress band">
-<div class="wrap">Loading the latest international congresses…</div>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">CONGRESSES</div>
+        <h2 class="title">International Congress</h2>
+      </div>
+      <p>The annual congress brings members together to learn, exchange ideas, build friendships and strengthen the association.</p>
+    </div>
+    <div class="grid3 congress-grid" id="congress-list">
+      <div class="card congress-card"><div class="rss-status">Loading international congresses…</div></div>
+      <div class="card congress-card"><div class="rss-status">Loading…</div></div>
+      <div class="card congress-card"><div class="rss-status">Loading…</div></div>
+    </div>
+    <p class="source-note">Source: <a href="https://www.lesclefsdor.org/" rel="noopener noreferrer" target="_blank">UICH Les Clefs d’Or International ↗</a></p>
+    <p class="community-feed-note">Automatically updated from UICH</p>
+  </div>
 </section>
 </main>
 <footer class="footer"><div class="wrap">
@@ -112,7 +158,7 @@
 (function(){
   const lists = document.querySelectorAll('.rss-list[data-rss-source]');
   const esc = (s) => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const fmt = (d) => { if (!d) return ''; const dt = new Date(d); return Number.isNaN(dt.getTime()) ? '' : dt.toLocaleDateString('zh-TW',{year:'numeric',month:'short',day:'numeric'}); };
+  const fmt = (d) => { if (!d) return ''; const dt = new Date(d); return Number.isNaN(dt.getTime()) ? '' : dt.toLocaleDateString('en-GB',{year:'numeric',month:'short',day:'numeric'}); };
   lists.forEach(async (list) => {
     const source = list.dataset.rssSource;
     try {
