@@ -899,3 +899,11 @@ body.en .nav {
   box-shadow: none !important;
   outline: 0 !important;
 }
+
+
+/* v19: remove unnecessary border, shadow and outline around Taiwan flag */
+.flag-icon.flag-tw {
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
