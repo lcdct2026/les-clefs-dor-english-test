@@ -1,0 +1,71 @@
+# Les Clefs d'Or Chinese Taipei — 官方網站
+
+本網站為靜態網站，設計為 GitHub + Cloudflare Pages 架構，無需資料庫或付費主機。
+
+## 結構
+- `index.html` 首頁
+- `about.html` 關於中華民國旅館金鑰匙協會
+- `spirit.html` 金鑰匙精神與專業
+- `members.html` 會員資訊
+- `news.html` 協會動態（含 International Congress 區塊）
+- `assets/site.css` 全站樣式
+- `assets/site.js` 全站互動
+- `data/README.md` 內容維護說明
+
+## 維護方式
+1. 在 GitHub Repository `CT-les-clefs-dor` 更新檔案。
+2. Commit 到 `main`。
+3. Cloudflare Pages 會自動部署。
+
+## 資料原則
+本版本內容以 2026-09-25 可取得的公開資料為基礎，優先採用 UICH Les Clefs d'Or 國際總會官方網站；Chinese Taipei 分會近況則參考台灣協會公開發布的 2026 年訊息。
+
+為避免造成會員與飯店營運困擾，本版本不公開會員所屬飯店及個人聯絡方式；完整會員名錄應由協會依會員同意與最新內部資料填入。
+
+### 主要參考來源
+- https://www.lesclefsdor.org/
+- https://www.lesclefsdor.org/about/
+- https://www.lesclefsdor.org/about/history/
+- https://www.lesclefsdor.org/about/membership/
+- https://www.lesclefsdor.org/about/leadership/
+- https://www.lesclefsdor.org/destinations/
+- https://www.lesclefsdor.org/countries/chinese-taipei/
+- https://congress.lesclefsdor.org/
+
+
+## 官方名稱規範
+- 中文正式名稱：中華民國旅館金鑰匙協會
+- 英文正式名稱：Les Clefs d’Or Chinese Taipei
+- 網站對外正式名稱以以上兩者為準；「台灣」僅作為地理名稱使用，不作為本協會中文或英文正式名稱。
+
+
+## Official naming and logo rules
+- 中文正式名稱：中華民國旅館金鑰匙協會
+- 英文正式名稱：Les Clefs d’Or Chinese Taipei
+- 官網目前只製作中文內容；英文、日文等語言版本日後另行規劃。
+- `assets/lcd-tw-logo.png`：台灣分會正式 Logo，用於官網主要品牌識別。
+- `assets/uich-logo.png`：UICH Les Clefs d’Or 國際總會 Logo，用於國際總會與相關內容。
+
+
+## Official Social Media
+- Facebook: https://www.facebook.com/profile.php?id=100064441579381
+- Instagram: https://www.instagram.com/lcdchinesetaipei/
+
+Social links are displayed in the 協會動態 page and footer.
+
+
+### Current navigation
+- 首頁
+- 理事長的話
+- 關於協會
+- 金鑰匙精神
+- 會員
+- 協會動態
+- 國際總會與國際大會相關內容
+
+
+## 協會動態自動更新
+The 協會動態 page uses a Cloudflare Pages Function at `/api/uich-feed` to load current UICH/Les Clefs d’Or items. It uses official UICH sources and caches results to keep maintenance and external requests low.
+
+- Growth feed selects the latest three items matching `Your Les Clefs d’Or Key Updates` from the UICH Training & Development archive.
+- International Congress uses `/api/uich-congresses` to load the latest three congress entries.

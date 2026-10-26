@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Page not found — Les Clefs d’Or Chinese Taipei"><title>Page Not Found | Les Clefs d’Or Chinese Taipei</title><link href="../assets/site.css" rel="stylesheet"><link href="../assets/lcd-tw-logo.png" rel="icon" type="image/png"></head><body class="en"><div class="topline"><div class="wrap"><span>LES CLEFS D’OR CHINESE TAIPEI</span><span>IN SERVICE THROUGH FRIENDSHIP</span></div></div><header><div class="wrap nav"><a class="brand" href="index.html"><img alt="Les Clefs d’Or Chinese Taipei logo" class="brand-logo" src="../assets/lcd-tw-logo.png"><span class="brand-text"><strong>LES CLEFS D’OR CHINESE TAIPEI</strong><span>Les Clefs d’Or Chinese Taipei</span></span></a><nav><a href="index.html">Home</a><a href="president.html">President’s Message</a><a href="about.html">About Us</a><a href="spirit.html">The Spirit of Les Clefs d’Or</a><a href="members.html">Members</a><a href="news.html">News &amp; Updates</a></nav><div class="language-switch">
+<button type="button" class="language-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+<span class="flag-icon flag-gb" aria-hidden="true"></span><span>English</span><span class="lang-chevron" aria-hidden="true"></span>
+</button>
+<div class="language-menu" role="menu">
+<a role="menuitem" href="../index.html"><span class="flag-icon flag-tw" aria-hidden="true"></span><span>繁體中文</span></a>
+<a role="menuitem" aria-current="page" href="index.html"><span class="flag-icon flag-gb" aria-hidden="true"></span><span>English</span></a>
+</div>
+</div><button aria-label="Open menu" class="menu">☰</button></div></header><main><section class="page-hero"><div class="wrap"><div class="eyebrow">404</div><h1>This page is not available.</h1><p>You can return to the Les Clefs d’Or Chinese Taipei homepage and continue exploring our association and the global concierge community.</p><div class="actions"><a class="btn primary" href="index.html">Back to Home</a></div></div></section></main><footer class="footer"><div class="wrap"><div class="footer-bottom"><span>© 2026 Les Clefs d’Or Chinese Taipei</span></div></div></footer><script src="../assets/site.js"></script><script>
+(function(){
+  document.querySelectorAll('.language-switch').forEach(function(box){
+    var button=box.querySelector('.language-toggle');
+    var menu=box.querySelector('.language-menu');
+    if(!button||!menu) return;
+    button.addEventListener('click',function(){
+      var open=box.classList.toggle('is-open');
+      button.setAttribute('aria-expanded',open?'true':'false');
+    });
+    document.addEventListener('click',function(event){
+      if(!box.contains(event.target)){
+        box.classList.remove('is-open');
+        button.setAttribute('aria-expanded','false');
+      }
+    });
+    document.addEventListener('keydown',function(event){
+      if(event.key==='Escape'){
+        box.classList.remove('is-open');
+        button.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+})();
+</script>
+</body></html>
